@@ -1,0 +1,99 @@
+/* ====== Global Reset ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Body ====== */
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e8f0ff, #f4f8fb);
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ====== Edit Card Container ====== */
+form {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 30, 60, 0.1);
+  padding: 30px 28px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+h2 {
+  text-align: center;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 15px;
+  color: #475569;
+}
+
+/* ====== Textarea ====== */
+textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+  font-size: 15px;
+  color: #1e293b;
+  line-height: 1.5;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ====== Submit Button ====== */
+button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ====== Fade Animation ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

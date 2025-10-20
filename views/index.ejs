@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatui</title>
+    <link rel="stylesheet" href="/chat.css">
+</head>
+
+<body>
+    <h3>ALL CHATs</h3>
+    <br>
+    <hr>
+    <form  method="get" action="/chats/new">
+        <button id="addChatBtn">Add Chat</button>
+    </form>
+    
+    
+    <div class="chat-container"> 
+        <% for(let chat of chats){ %>
+        <div class="chat" style="border: 1px solid black; padding: 10px; margin: 10px;">
+            <p id="from">From:<%=chat.from%></p>
+            <p id="to">To:<%=chat.to%></p>
+            <p id="msg">Mes:<%=chat.msg%></p>
+            <form action="/chats/<%=chat._id%>/edit" method="GET">
+                <button type="submit" id="edit">edit</button>
+            </form>
+            <hr>
+            <form action="/chats/<%=chat._id%>?_method=DELETE" method="POST">
+                <button type="submit" id="delete">delete</button>
+            </form>
+            <hr>
+        </div>
+        <%} %>
+    </div>
+</body>
+
+</html>
